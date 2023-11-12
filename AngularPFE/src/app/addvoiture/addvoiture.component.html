@@ -1,0 +1,50 @@
+
+
+
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button class="btn btn-primary my-3" [routerLink]="['/listvoitur']">Back</button>
+        <h6 class="m-0 font-weight-bold text-primary">Add voitur</h6>
+    </div>
+    <div class="card-body">
+       <form [formGroup]="addUserForm" (ngSubmit)="onSubmit()" >
+           <div class="form-group mb-3">
+            <label for="Cin">num :</label>
+            <input type="text" name="num" id="num" formControlName="Num"  class="form-control" [(ngModel)]="num">
+           </div>
+           <div class="form-group mb-3">
+            <label for="modele">modele :</label>
+            <input type="text" name="modele" id="modele" class="form-control" formControlName="Modele" [(ngModel)]="modele"  >
+           </div>
+
+           <div class="form-group mb-3">
+
+            <label for="matricule">matricule :</label>
+            <input type="text" name="matricule" id="matricule" class="form-control" formControlName="Matricule"   [(ngModel)]="matricule" >
+        </div>
+       <div class="form-group mb-3">
+        <label for="marque">marque :</label> 
+        <input type="text" name="marque" id="marque" formControlName="Marque" class="form-control" [(ngModel)]="marque">
+
+        </div>
+        
+    
+        
+    
+
+    
+
+
+
+
+ 
+           <div class="form-group">
+            <button type="submit" class="btn btn-primary" (click)="onSubmit()">Add voiture</button>
+            </div>
+
+     
+          
+       
+       </form>
+    </div>
+</div>

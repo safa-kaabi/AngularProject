@@ -1,0 +1,40 @@
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <button class="btn btn-primary my-3" [routerLink]="['/listvoitur']">Back</button>
+        <h6 class="m-0 font-weight-bold text-primary">Update voiture</h6>
+    </div>
+    <div class="card-body">
+       <form [formGroup]="formGroup" (ngSubmit)="onSubmit1()" >
+           <div class="form-group mb-3">
+            <label for="num">num :</label>
+            <input type="text" class="form-control" formControlName="Num" name="num" value = "{{ data.num }}" [(ngModel)]="data.num">
+           </div>
+           <div class="form-group mb-3">
+            <label for="modele">modele :</label>
+            <input type="text" class="form-control" formControlName="Modele" name="nom" value = "{{ data.modele }}" [(ngModel)]="data.modele">
+           </div>
+
+           <div class="form-group mb-3">
+            <label for="marque">marque :</label>
+            <input type="text" class="form-control" formControlName="Marque" name="marque" value = "{{ data.marque }}" [(ngModel)]="data.marque">
+        </div>
+        <div class="form-group mb-3">
+            <label for="matricule">matricule :</label>
+            <input type="text" class="form-control" formControlName="Matricule" name="matricule" value = "{{ data.matricule }}" [(ngModel)]="data.matricule">
+        </div>
+        
+        
+       
+            
+
+ 
+           <div class="form-group">
+                <button type="submit" class="btn btn-primary" >Update</button>
+            </div>
+
+
+            
+       
+       </form>
+    </div>
+</div>
